@@ -12,4 +12,12 @@ export class TabNgif2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedSkills : string = 'Flex'
+
+  onSkillChange(skill:string){
+   this.selectedSkills = skill
+ }
+
+ 
+
 }

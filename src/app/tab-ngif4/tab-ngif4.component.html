@@ -1,0 +1,52 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a (clcik)="onSkillChange('.net')"
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('.net')
+        }"
+         href="javascript" class="nav-link">.Net</a>
+    </li>
+
+    <li class="nav-item">
+        <a (click)="onSkillChange('next.js')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('next.js')
+        }"
+        href="javascript:;" class="nav-link">Next.js</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('java')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('java')
+        }"
+         href="javascript:;" class="nav-link">Java</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('angular')"
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('angular')
+        }"
+        href="javascript:;" class="nav-link">Angular</a>
+    </li>
+</ul>
+
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('.net')">
+    <div class="card-body">
+        <strong>.Net</strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae repudiandae dolorum nostrum, et veritatis.
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('next.js')">
+    <div class="card-body">
+        <strong>Next.js</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium assumenda ea cumque iure nam.
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('java')">
+    <div class="card-body">
+        <strong>Java</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus deserunt excepturi molestias rerum delectus?
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('angular')">
+    <div class="card-body">
+        <strong>Angular</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum at placeat velit magnam corporis dolor!
+    </div>
+</div>

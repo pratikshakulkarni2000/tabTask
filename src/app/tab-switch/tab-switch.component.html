@@ -1,0 +1,54 @@
+<ul class="nav nav-pills">
+    
+    <li class="nav-item">
+        <a (click)="onSkillChange('organic')"
+         [ngClass]="{
+            active : selectedSkill === 'organic'
+        }"
+         href="javascript:;" class="nav-link">Organic</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('inorganic')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('inorganic')
+        }"
+        href="javascript:;" class="nav-link">Inorganic</a>
+    </li>
+    <li class="nav-item">
+        <a  (click)="onSkillChange('physical')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('physical')
+        }"
+        href="javascript:;" class="nav-link">Physical</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('analytical')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('analytical')
+        }"
+         href="javascript:;" class="nav-link">Analytical</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="selectedSkill">
+    <div class="card" *ngSwitchCase="'organic'">
+        <div class="card-body">
+            <strong>Organic</strong> chemistry is the study of the structure, properties, composition, reactions, and preparation of carbon-containing compounds.
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'inorganic'">
+        <div class="card-body">
+            <strong>Inorganic</strong> chemistry is the branch of chemistry studying compounds of all elements, particularly those lacking carbon-hydrogen bonds
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'physical'">
+        <div class="card-body">
+            <strong>Physical</strong> chemistry is the branch of chemistry studying compounds of all elements, particularly those lacking carbon-hydrogen bonds
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'analytical'">
+        <div class="card-body">
+            <strong>Analytical</strong> chemistry is the branch of chemistry concerned with the development and application of methods to identify the chemical composition of materials and quantify the amounts of components in mixtures.
+        </div>
+    </div>
+</div>

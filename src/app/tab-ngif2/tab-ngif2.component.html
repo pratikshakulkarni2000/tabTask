@@ -1,0 +1,52 @@
+<div class="nav nav-pills">
+    <li class="nav-item">
+        <a (click)="onSkillChange('Flex')"
+        [ngClass]="{
+            active : selectedSkills.toLowerCase().includes('flex')
+        }"
+        href="javascript:;" class="nav-link">Flex</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('Sass')"
+        [ngClass]="{
+            active : selectedSkills.toLowerCase().includes('sass')
+        }"
+        href="javascript:;" class="nav-link">Sass</a>
+    </li>
+    <li class="nav-item">
+        <a (click)="onSkillChange('Bootstrap')" 
+        [ngClass]="{
+            active : selectedSkills.toLowerCase().includes('bootstrap')
+        }"
+         href="javascript:;" class="nav-link">Bootstrap</a>
+    </li>
+    <li class="nav-item">
+        <a  (click)="onSkillChange('Html5')" 
+        [ngClass]="{
+            active : selectedSkills.toLowerCase().includes('html5')
+        }"
+         href="javascript:;" class="nav-link">Html5</a>
+    </li>
+</div>
+
+
+<div class="card" *ngIf="selectedSkills.toLowerCase().includes('flex')">
+    <div class="card-body">
+        <strong>Flex</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque!
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkills.toLowerCase().includes('sass')">
+    <div class="card-body">
+        <strong>Sass</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque!
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkills.toLowerCase().includes('bootstrap')">
+    <div class="card-body">
+        <strong>Bootstrap</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque!
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkills.toLowerCase().includes('html5')">
+    <div class="card-body">
+        <strong>Html5</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque!
+    </div>
+</div>

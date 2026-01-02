@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Itab } from './models/tab';
 
 @Component({
   selector: 'app-tab-ng-for',
@@ -25,6 +26,10 @@ export class TabNgForComponent implements OnInit {
       skillInfo : 'It uses tags and elements to instruct a web browser on how to display text, images, links'
     },
   ]
+
+  trackById (index:number,tab:Itab){
+    return tab.skillInfo
+  }
 
   selectedSkill : string = 'Html'
 

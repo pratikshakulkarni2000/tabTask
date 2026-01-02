@@ -1,0 +1,53 @@
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a (click)="onSkillChange('react')"
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('react')
+        }"
+         href="javascript:;" class="nav-link">React</a>
+    </li>
+    <div class="nav-item">
+         <a (click)="onSkillChange('node')"
+          [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('node')
+         }"
+         href="javascript:;" class="nav-link">Node</a>
+    </div>
+    <div class="nav-item">
+        <a (click)="onSkillChange('vue')"
+         [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('vue')
+        }"
+        href="javascript:;" class="nav-link">Vue</a>
+    </div>
+    <div class="nav-item">
+        <a (click)="onSkillChange('Python')"
+        [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('python') 
+        }"
+        href="javascript:;" class="nav-link">Python</a>
+    </div>
+</ul>
+
+
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('react')">
+    <div class="card-body">
+        <strong>React</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae unde recusandae culpa obcaecati in. Dignissimos.
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('node')">
+    <div class="card-body">
+        <strong>Node</strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nesciunt odio laudantium quos exercitationem cumque?
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('vue')">
+    <div class="card-body">
+        <strong>Vue</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus provident porro vitae cumque ut reiciendis?
+    </div>
+</div>
+<div class="card" *ngIf="selectedSkill.toLowerCase().includes('python')">
+    <div class="card-body">
+        <strong>Python</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio recusandae ut repellendus delectus aperiam magnam.
+    </div>
+</div>
